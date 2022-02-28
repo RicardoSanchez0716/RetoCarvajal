@@ -1,0 +1,209 @@
+<div class="formularioCamisetas">
+
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+        <h1>CAMISETAS</h1>
+        <br><br><br>
+        <div class="form-group">
+            <h3>Camiseta ATARI</h3>
+            <br>
+            <img src="../assets/Atari.jpg" alt="atari" >
+            
+
+        </div>
+        <form th:object="${camiseta}" th:action="@{/camisetas/agregar/} + ${camiseta.id}" method="post">
+            <input type="hidden" th:field="*{id}">
+
+                <a th:text="${camiseta.nombre}"></a>
+                <a th:text="${camiseta.precio}"></a>
+                <a th:text="${camiseta.stock}"></a>
+                <a th:text="${camiseta.informacion}"></a>
+        
+        <h3>Precio: $35.000</h3>
+                    <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                            class="fa fa-edit"></i></a>
+        <br>
+       
+
+        </form>
+        <br><br><br>
+    </form>
+  
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+      
+        <div class="form-group">
+            <h3>Camiseta Calaveras</h3>
+            <br>
+            <img src="../assets/Calaveras.jpg" alt="calaveras" >
+
+        </div>
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        <br>
+        
+        <br><br><br>
+
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta Demonio</h3>
+            <br>
+            <img src="../assets/Demonio.jpg" alt="demonio" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta DOOM</h3>
+            <br>
+            <img src="../assets/Doom.jpg" alt="DOOM" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        <br>
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta Breaking Bad</h3>
+            <br>
+            <img src="../assets/Heisenberg.jpg" alt="Breaking Bad" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta Madara</h3>
+            <br>
+            <img src="../assets/Madara.jpg" alt="Madara" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta Naruto</h3>
+            <br>
+            <img src="../assets/Naruto.jpg" alt="Naruto" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta Press Start</h3>
+            <br>
+            <img src="../assets/Press Start.jpg" alt="Press Start" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        
+        <br><br><br>
+    </form>
+
+    <form [formGroup]="camisetaForm" (ngSubmit)="guardar()">
+
+       
+        <div class="form-group">
+            <h3>Camiseta The Last of Us</h3>
+            <br>
+            <img src="../assets/TLoU.jpg" alt="TLoU" >
+
+        </div>
+
+        <h3>Precio: $35.000</h3>
+        <a class="btn btn-warning" th:href="@{/camiseta/editar/} + ${camiseta.id}">Agregar a Wish List <i
+                class="fa fa-edit"></i></a>
+        
+        <br><br><br>
+    </form>
+</div>
+
+
+<div class="col-12">
+    <h2 style="margin: 15px; color: red;">Mi Wish List</h2>
+    <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+         th:text="${mensaje}"
+         class="alert">
+   
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Stock</th>
+                <th>Informacion</th>
+                <th>Eliminar</th>
+               
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="camiseta : ${camisetas}">
+                <td th:text="${camiseta.nombre}"></td>
+                <td th:text="${camiseta.codigo}"></td>
+                <td th:text="${camiseta.precio}"></td>
+                <td th:text="${camiseta.existencia}"></td>
+              
+                <td>
+                    <form th:action="@{/camiseta/eliminar}" method="post">
+                        <input type="hidden" name="id" th:value="${camiseta.id}"/>
+                        <button type="submit" class="btn btn-danger">Eliminar <i class="fa fa-trash"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
